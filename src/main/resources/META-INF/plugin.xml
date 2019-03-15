@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>com.auto1.tutorial-intellij-plugin</id>
+    <name>AUTO1 Inspection Tutorial</name>
+    <vendor email="piotr.czekaj@auto1.com" url="http://www.auto1.com">AUTO1</vendor>
+
+    <description><![CDATA[
+        Provides sample inspection that warns developer if he uses @DirtiesContext
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <resource-bundle>com.auto1.intellij.tutorial.PluginBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <inspectionToolProvider implementation="com.auto1.intellij.tutorial.CodeInspectionProvider"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
